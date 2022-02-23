@@ -1,3 +1,3 @@
-<template>
-  <div>Rich text editor</div>
+<template lang="pug">
+  div Rich text editor
 </template>
