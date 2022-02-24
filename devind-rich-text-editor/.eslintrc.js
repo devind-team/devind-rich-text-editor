@@ -8,7 +8,7 @@ module.exports = {
     project: ['./tsconfig.json'],
     extraFileExtensions: ['.vue']
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'jest', 'testing-library'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -16,9 +16,14 @@ module.exports = {
     'plugin:vue/recommended',
     'plugin:vue-pug-sfc/recommended',
     '@vue/typescript/recommended',
+    'plugin:jest/recommended',
+    'plugin:testing-library/vue',
     'plugin:prettier-vue/recommended',
     'prettier'
   ],
+  env: {
+    'jest/globals': true
+  },
   overrides: [
     {
       files: ['**/*.vue'],

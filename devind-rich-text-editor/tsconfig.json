@@ -13,7 +13,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "types": ["node", "unplugin-vue2-script-setup/types"]
+    "types": ["node", "jest", "unplugin-vue2-script-setup/types"]
   },
-  "include": ["vite.config.ts", "index.ts", "src"]
+  "exclude": ["node_modules"],
+  "include": ["vite.config.ts", "index.ts", "src", "tests"]
 }
