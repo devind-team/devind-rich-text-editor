@@ -1,11 +1,36 @@
 {
   "name": "devind-rich-text-editor",
-  "private": true,
+  "description": "Vue text editor component based on the Tiptap framework.",
   "version": "0.0.0",
+  "author": "devind-team <team@devind.ru>",
+  "private": false,
+  "keywords": [
+    "Vue",
+    "Tiptap",
+    "Text editor"
+  ],
+  "homepage": "https://github.com/devind-team/devind-rich-text-editor#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devind-team/devind-rich-text-editor"
+  },
+  "bugs": {
+    "url": "https://github.com/devind-team/devind-rich-text-editor/issues",
+    "email": "team@devind.ru"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build"
+  },
+  "files": ["dist"],
+  "main": "./dist/my-lib.umd.js",
+  "module": "./dist/my-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.es.js",
+      "require": "./dist/my-lib.umd.js"
+    }
   },
   "devDependencies": {
     "@types/estree": "^0.0.51",
