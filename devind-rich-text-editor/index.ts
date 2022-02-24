@@ -1,1 +1,1 @@
-export { default as RichTextEditor } from './src/components/RichTextEditor.vue'
+export { default } from './src/components/RichTextEditor.vue'
