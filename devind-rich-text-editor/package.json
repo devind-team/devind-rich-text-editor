@@ -19,11 +19,9 @@
     "email": "team@devind.ru"
   },
   "license": "MIT",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build"
-  },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
   "exports": {
@@ -32,11 +30,25 @@
       "require": "./dist/my-lib.umd.js"
     }
   },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext .js,.ts,.vue"
+  },
   "devDependencies": {
     "@types/estree": "^0.0.51",
     "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
     "@vue/composition-api": "^1.4.6",
+    "@vue/eslint-config-typescript": "^10.0.0",
     "@vue/runtime-dom": "^3.2.31",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier-vue": "^3.1.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "eslint-plugin-vue-pug-sfc": "^1.0.0-alpha.20",
+    "prettier": "^2.5.1",
     "pug": "^3.0.2",
     "sass": "^1.49.8",
     "typescript": "^4.5.4",
@@ -44,6 +56,7 @@
     "vite": "^2.8.0",
     "vite-plugin-vue2": "^1.9.3",
     "vue": "^2.6.11",
+    "vue-eslint-parser": "^8.3.0",
     "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {}
