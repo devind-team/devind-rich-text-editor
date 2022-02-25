@@ -46,9 +46,6 @@ jobs:
     name: Release
     needs: [test]
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./devind-rich-text-editor
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -57,6 +54,16 @@ jobs:
         with:
           branches: | 
             ['main']
+          plugins: |
+            [
+              '@semantic-release/commit-analyzer',
+              '@semantic-release/release-notes-generator',
+              [
+                '@semantic-release/npm',
+                - pkgRoot: 'devind-rich-text-editor'
+              ],
+              '@semantic-release/github'
+            ]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
