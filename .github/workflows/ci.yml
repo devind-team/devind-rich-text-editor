@@ -14,47 +14,38 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./devind-rich-text-editor
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: install
+          cmd: --cwd devind-rich-text-editor install
       - name: Lint
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: lint
+          cmd: --cwd devind-rich-text-editor lint
 
   test:
     name: Test
     needs: [lint]
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./devind-rich-text-editor
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: install
+          cmd: --cwd devind-rich-text-editor install
       - name: Test
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: test
+          cmd: --cwd devind-rich-text-editor test
 
   release:
     name: Release
     needs: [test]
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./devind-rich-text-editor
     steps:
       - name: Checkout
         uses: actions/checkout@v2
