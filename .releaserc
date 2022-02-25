@@ -6,7 +6,7 @@
     [
       "@semantic-release/npm",
       {
-        "pkgRoot": "devind-rich-text-editor"
+        "pkgRoot": "devind-rich-text-editor/dist"
       }
     ],
     "@semantic-release/github"

@@ -57,6 +57,9 @@ jobs:
         uses: borales/actions-yarn@v2.3.0
         with:
           cmd: --cwd devind-rich-text-editor build
+      - name: Post Build
+        working-directory: ./devind-rich-text-editor
+        run: cp package.json dist
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
         env:
