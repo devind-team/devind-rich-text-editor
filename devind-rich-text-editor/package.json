@@ -40,8 +40,8 @@
     "lint": "eslint . --ext .js,.ts,.vue",
     "test": "jest",
     "postinstall": "cd .. && husky install",
-    "prepack": "cd .. && pinst --disable",
-    "postpack": "cd .. && pinst --enable"
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
