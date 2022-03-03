@@ -4,7 +4,7 @@ logs
 yarn-debug.log*
 yarn-error.log*
 
-devind-rich-text-editor/node_modules
+node_modules
 dist
 *.local
 

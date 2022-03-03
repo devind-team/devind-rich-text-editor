@@ -20,11 +20,11 @@ jobs:
       - name: Install
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: --cwd devind-rich-text-editor install
+          cmd: install
       - name: Lint
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: --cwd devind-rich-text-editor lint
+          cmd: lint
 
   test:
     name: Test
@@ -36,11 +36,11 @@ jobs:
       - name: Install
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: --cwd devind-rich-text-editor install
+          cmd: install
       - name: Test
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: --cwd devind-rich-text-editor test
+          cmd: test
 
   release:
     name: Release
@@ -52,13 +52,12 @@ jobs:
       - name: Install
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: --cwd devind-rich-text-editor install --immutable --immutable-cache --check-cache
+          cmd: install --immutable --immutable-cache --check-cache
       - name: Build
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: --cwd devind-rich-text-editor build
+          cmd: build
       - name: Post Build
-        working-directory: ./devind-rich-text-editor
         run: |
           sudo cp -p package.json dist/
           sudo cp -r -p node_modules dist/

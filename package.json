@@ -36,7 +36,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext .js,.ts,.vue",
     "test": "jest",
-    "postinstall": "cd .. && husky install",
+    "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
   },
