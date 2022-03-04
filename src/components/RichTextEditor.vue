@@ -1,8 +1,8 @@
 <template lang="pug">
-div
-  .rich-text-editor Rich text editor
-  div Value: {{ counter }}
-  button(@click="inc") Inc
+v-card
+  v-card-text
+    div Value: {{ counter }}
+    v-btn(@click="inc") Inc
 </template>
 
 <script setup lang="ts">

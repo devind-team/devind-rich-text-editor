@@ -16,5 +16,5 @@
     "types": ["node", "jest", "unplugin-vue2-script-setup/types"]
   },
   "exclude": ["node_modules"],
-  "include": ["vite.config.ts", "index.ts", "src", "tests"]
+  "include": ["vite.config.ts", "components.d.ts", "index.ts", "src", "tests"]
 }
