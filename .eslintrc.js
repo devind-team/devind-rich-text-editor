@@ -11,6 +11,8 @@ module.exports = {
   plugins: ['@typescript-eslint', 'jest', 'testing-library'],
   extends: [
     'eslint:recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:vue/recommended',
@@ -24,11 +26,25 @@ module.exports = {
   env: {
     'jest/globals': true
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.ts', '.js', '.jsx', '.json']
+      }
+    }
+  },
   overrides: [
     {
       files: ['**/*.vue'],
       rules: {
         '@typescript-eslint/no-unused-vars': 'off'
+      }
+    },
+    {
+      files: ['**/*.spec.ts'],
+      rules: {
+        'jest/expect-expect': 'off'
       }
     }
   ]

@@ -13,8 +13,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "types": ["node", "jest", "unplugin-vue2-script-setup/types"]
+    "types": ["node", "jest", "unplugin-vue2-script-setup/types"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "dist"],
   "include": ["vite.config.ts", "components.d.ts", "index.ts", "src", "tests"]
 }
