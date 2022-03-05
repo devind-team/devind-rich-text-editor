@@ -1,8 +1,8 @@
 <template lang="pug">
 v-card
   v-card-text
-    div Value: {{ counter }}
-    v-btn(@click="inc") Inc
+    div {{ $t('value', { value: counter }) }}
+    v-btn(@click="inc") {{ $t('inc') }}
 </template>
 
 <script setup lang="ts">

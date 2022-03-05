@@ -46,6 +46,12 @@ module.exports = {
       rules: {
         'jest/expect-expect': 'off'
       }
+    },
+    {
+      files: ['**/*.ts'],
+      rules: {
+        '@typescript-eslint/no-unsafe-assignment': 'off'
+      }
     }
   ]
 }
